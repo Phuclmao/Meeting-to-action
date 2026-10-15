@@ -3,7 +3,7 @@
 MVP cho Bài test C (Mission 2). **Phần được chọn để chứng minh:** hệ thống giữ đúng *kết luận cuối cùng* khi ý kiến đổi trong cuộc họp (A → B) và mọi mục trích ra đều gắn với bằng chứng thật trong transcript.
 
 - Demo online: https://meeting-to-action-2wvdmdfjomfydeben3rdtl.streamlit.app
-- Video (≤ 5 phút): `<ĐIỀN LINK>`
+- Video (≤ 5 phút): https://youtu.be/d-qllkyqxbo
 
 ## Cách hoạt động
 1. **Một lần gọi model** (Gemini Flash, ép đầu ra JSON theo schema): model gom các đoạn thành chuỗi chủ đề, ghi diễn biến, rồi trích 6 loại mục (quyết định, việc, vướng mắc, yêu cầu/phản hồi, vấn đề chưa chốt, tri thức) với trạng thái `final / superseded / proposed / deferred / cancelled / open`.
