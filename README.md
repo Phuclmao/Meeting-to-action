@@ -2,7 +2,7 @@
 
 MVP cho Bài test C (Mission 2). **Phần được chọn để chứng minh:** hệ thống giữ đúng *kết luận cuối cùng* khi ý kiến đổi trong cuộc họp (A → B) và mọi mục trích ra đều gắn với bằng chứng thật trong transcript.
 
-- Demo online: [`<ĐIỀN LINK>` ](https://meeting-to-action-2wvdmdfjomfydeben3rdtl.streamlit.app/)
+- Demo online: https://meeting-to-action-2wvdmdfjomfydeben3rdtl.streamlit.app
 - Video (≤ 5 phút): `<ĐIỀN LINK>`
 
 ## Cách hoạt động
