@@ -1,0 +1,13 @@
+[00:30] Lan: Chào mọi người, hôm nay mình chốt hướng làm thanh toán cho bản tháng 11.
+[01:10] Lan: Em đề xuất phương án A, tự xây hệ thống thanh toán, để chủ động toàn bộ.
+[02:05] Hùng: Em thấy A rủi ro. Tự xây phải qua kiểm định bảo mật, ít nhất hai tháng.
+[03:00] Minh: Mình đồng ý với Hùng, bên test cũng không đủ người test luồng tiền.
+[04:10] Hùng: Em đề xuất phương án B, dùng cổng thanh toán VNPay, tích hợp khoảng hai tuần.
+[05:00] Lan: Chi phí B thế nào?
+[05:20] Hùng: Phí giao dịch khoảng 1,1 phần trăm, em chưa có báo giá chính thức.
+[06:00] Lan: Vậy chốt B, dùng VNPay. Hùng gửi báo giá chính thức trước thứ Sáu nhé.
+[06:20] Hùng: Ok chị, em gửi trước thứ Sáu.
+[07:00] Minh: Em cần tài khoản sandbox của VNPay để viết test, ai xin giúp em?
+[07:15] Hùng: Em xin luôn khi liên hệ báo giá.
+[08:00] Lan: Còn vấn đề hoàn tiền thì mình chưa bàn, để họp sau.
+[08:30] Hà: Màn hình thanh toán em sẽ cập nhật theo VNPay, nhưng cần chốt luồng trước.

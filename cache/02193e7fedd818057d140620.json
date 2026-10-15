@@ -1,0 +1,114 @@
+{
+  "threads": [
+    {
+      "topic": "Lựa chọn server staging",
+      "steps": [
+        "00:50 Hùng đề xuất dùng AWS",
+        "01:20 Lan đồng ý dùng AWS",
+        "02:30 Hùng đổi sang Azure vì AWS đắt hơn 20%",
+        "03:10 Lan chốt dùng Azure"
+      ]
+    },
+    {
+      "topic": "Lịch release sản phẩm",
+      "steps": [
+        "01:20 Lan đề xuất ngày 30/11",
+        "01:50 Minh phản đối 30/11, đề xuất 5/12 vì QA cần thêm thời gian",
+        "03:10 Lan chưa chốt lịch, chờ dữ liệu từ QA",
+        "03:50 Minh hứa gửi ước lượng thời gian test vào ngày mai"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Sử dụng AWS cho server staging",
+      "status": "superseded",
+      "owner": "Hùng",
+      "due": null,
+      "rationale": "Hùng sau đó phát hiện AWS đắt hơn Azure 20% nên đã thay đổi phương án",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Staging em đề xuất dùng AWS, quen rồi."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Sử dụng Azure cho server staging",
+      "status": "final",
+      "owner": "Hùng",
+      "due": null,
+      "rationale": "Tiết kiệm 20% chi phí so với AWS",
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Ok, vậy staging dùng Azure."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Release vào ngày 30/11",
+      "status": "superseded",
+      "owner": "Lan",
+      "due": "30/11",
+      "rationale": "Bị QA phản đối do không đủ thời gian và Lan đã quyết định chưa chốt để chờ thêm dữ liệu",
+      "evidence": [
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Còn release, chị muốn ngày 30/11."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Chưa chốt ngày release chính thức",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Release thì chị cần thêm dữ liệu từ QA, chưa chốt."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Đang cân nhắc giữa 30/11 và 5/12"
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi ước lượng thời gian test cho Lan",
+      "status": "open",
+      "owner": "Minh",
+      "due": "ngày mai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:50",
+          "speaker": "Minh",
+          "quote": "Em gửi ước lượng thời gian test cho chị trong ngày mai."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

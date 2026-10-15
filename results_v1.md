@@ -1,0 +1,12 @@
+# Kết quả kiểm thử
+
+Đạt 3/6
+
+| Tình huống | Kỳ vọng | Kết quả thực tế | Đạt / Chưa đạt | Điều học được |
+|---|---|---|---|---|
+| S1 (Làm tốt) | Chốt đúng B (VNPay), A bị thay thế; việc Hùng gửi báo giá trước thứ Sáu; vấn đề hoàn tiền là chưa chốt. | decision/superseded: Tự xây dựng hệ thống thanh toán (Phương án A)<br>decision/final: Sử dụng cổng thanh toán VNPay cho bản tháng 11 (Phương án B)<br>action_item/open: Gửi báo giá chính thức của VNPay [Hùng, trước thứ Sáu]<br>action_item/open: Liên hệ xin tài khoản sandbox của VNPay [Hùng, ?] | Đạt | _(điền sau khi đọc kết quả)_ |
+| S2 (Khó: đổi ý nhiều lần) | Ngày demo chốt là 22/11 (không phải 20/11 hay 25/11); Hà làm kịch bản trước 18/11. | decision/superseded: Demo vào ngày 20/11<br>decision/superseded: Demo vào ngày 25/11<br>decision/final: Chốt ngày demo là 22/11, bản demo sẽ không bao gồm luồng hoàn tiền.<br>action_item/open: Chuẩn bị kịch bản demo [Hà, trước ngày 18/11] | Đạt | _(điền sau khi đọc kết quả)_ |
+| S3 (Khó: owner mơ hồ) | Việc gửi tài liệu API và cập nhật Notion không có owner chắc chắn: để trống owner hoặc gắn cờ cần xác nhận, không bịa. | action_item/open: Gửi tài liệu API cho đối tác [Hùng, tuần sau]<br>action_item/open: Xem lại bản test báo cáo [Minh, sớm] ⚠️<br>action_item/open: Cập nhật lịch trên Notion [Hà, ?] ⚠️ | Chưa đạt: việc 'API' có owner 'Hùng' mà không gắn cờ | _(điền sau khi đọc kết quả)_ |
+| S4 (Bẫy: không có quyết định) | Không tạo quyết định chốt về Zalo; ghi là vấn đề chưa chốt; việc Hùng tìm hiểu điều khoản. | decision/deferred: Thêm tính năng đăng nhập bằng Zalo<br>action_item/open: Tìm hiểu thêm điều khoản của Zalo [Hùng, trước buổi họp thứ Hai tuần sau] | Chưa đạt: thiếu vấn đề chưa chốt | _(điền sau khi đọc kết quả)_ |
+| S5 (Dự kiến khó: chốt rồi bị mở lại) | S3 không được còn là quyết định chốt chắc chắn (phải hoãn hoặc gắn cờ); việc tạo bucket không còn hiệu lực. | decision/superseded: Sử dụng S3 để lưu trữ ảnh ⚠️<br>action_item/deferred: Tạo bucket lưu trữ trên S3 [Hùng, trong tuần này]<br>action_item/open: Kiểm tra lại với bộ phận pháp chế về việc sử dụng S3 [Lan, ?] | Chưa đạt: thiếu vấn đề chưa chốt | _(điền sau khi đọc kết quả)_ |
+| S6 (Dự kiến khó: chốt ngầm) | Hiểu 'Ok vậy làm đi' là chốt gửi báo cáo vào thứ Ba; Minh gửi số liệu QA chiều thứ Hai. | decision/final: Gửi báo cáo tuần vào thứ Ba<br>decision/superseded: Gửi báo cáo tuần vào thứ Hai<br>action_item/open: Gửi số liệu QA cho Hùng [Minh, chiều thứ Hai] | Đạt | _(điền sau khi đọc kết quả)_ |

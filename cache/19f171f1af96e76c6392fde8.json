@@ -1,0 +1,145 @@
+{
+  "threads": [
+    {
+      "topic": "Phương án hệ thống thanh toán cho bản tháng 11",
+      "steps": [
+        "01:10 Lan đề xuất phương án A (tự xây hệ thống)",
+        "02:05 Hùng phản đối phương án A do rủi ro bảo mật và thời gian kiểm định",
+        "03:00 Minh đồng ý với Hùng vì thiếu nhân sự kiểm thử",
+        "04:10 Hùng đề xuất phương án B (dùng VNPay)",
+        "06:00 Lan chốt phương án B"
+      ]
+    },
+    {
+      "topic": "Triển khai tích hợp VNPay",
+      "steps": [
+        "06:00 Lan yêu cầu Hùng gửi báo giá trước thứ Sáu",
+        "06:20 Hùng xác nhận gửi báo giá",
+        "07:00 Minh yêu cầu tài khoản sandbox để viết test",
+        "07:15 Hùng nhận trách nhiệm xin tài khoản sandbox"
+      ]
+    },
+    {
+      "topic": "Các vấn đề tồn đọng về thanh toán",
+      "steps": [
+        "08:00 Lan hoãn bàn về vấn đề hoàn tiền",
+        "08:30 Hà yêu cầu chốt luồng thanh toán để cập nhật màn hình"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Tự xây dựng hệ thống thanh toán (Phương án A)",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Rủi ro bảo mật, thời gian kiểm định lâu (2 tháng) và thiếu nhân sự kiểm thử luồng tiền.",
+      "evidence": [
+        {
+          "time": "01:10",
+          "speaker": "Lan",
+          "quote": "Em đề xuất phương án A, tự xây hệ thống thanh toán, để chủ động toàn bộ."
+        },
+        {
+          "time": "02:05",
+          "speaker": "Hùng",
+          "quote": "Em thấy A rủi ro. Tự xây phải qua kiểm định bảo mật, ít nhất hai tháng."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Sử dụng cổng thanh toán VNPay cho bản tháng 11 (Phương án B)",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Thời gian tích hợp nhanh (khoảng 2 tuần) và giải quyết được các rủi ro của phương án tự xây.",
+      "evidence": [
+        {
+          "time": "06:00",
+          "speaker": "Lan",
+          "quote": "Vậy chốt B, dùng VNPay."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi báo giá chính thức của VNPay",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "trước thứ Sáu",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "06:00",
+          "speaker": "Lan",
+          "quote": "Hùng gửi báo giá chính thức trước thứ Sáu nhé."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Liên hệ xin tài khoản sandbox của VNPay",
+      "status": "open",
+      "owner": "Hùng",
+      "due": null,
+      "rationale": "Cần thiết để bên kiểm thử (Minh) viết test.",
+      "evidence": [
+        {
+          "time": "07:15",
+          "speaker": "Hùng",
+          "quote": "Em xin luôn khi liên hệ báo giá."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Cơ chế hoàn tiền (refund) chưa được thảo luận",
+      "status": "deferred",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "08:00",
+          "speaker": "Lan",
+          "quote": "Còn vấn đề hoàn tiền thì mình chưa bàn, để họp sau."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Sẽ được thảo luận trong cuộc họp sau."
+    },
+    {
+      "type": "open_issue",
+      "content": "Chốt luồng thanh toán chi tiết cho thiết kế màn hình",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": "Hà cần luồng chốt để cập nhật giao diện theo VNPay.",
+      "evidence": [
+        {
+          "time": "08:30",
+          "speaker": "Hà",
+          "quote": "Màn hình thanh toán em sẽ cập nhật theo VNPay, nhưng cần chốt luồng trước."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": true,
+      "note": "Chưa chỉ định ai chịu trách nhiệm chốt luồng này."
+    }
+  ]
+}

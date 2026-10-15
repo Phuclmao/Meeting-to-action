@@ -1,0 +1,97 @@
+{
+  "threads": [
+    {
+      "topic": "Gửi tài liệu API cho đối tác",
+      "steps": [
+        "00:15 Lan nêu nhu cầu gửi tài liệu API",
+        "00:40 Lan yêu cầu bên kỹ thuật gửi vào tuần sau",
+        "00:55 Hùng xác nhận bên kỹ thuật sẽ lo"
+      ]
+    },
+    {
+      "topic": "Kiểm tra bản test báo cáo",
+      "steps": [
+        "01:30 Lan nhờ bên QA xem lại bản test báo cáo sớm",
+        "01:45 Minh xác nhận sẽ xem khi rảnh"
+      ]
+    },
+    {
+      "topic": "Cập nhật lịch trên Notion",
+      "steps": [
+        "02:10 Lan nhắc cập nhật lịch trên Notion",
+        "02:20 Hà xác nhận thực hiện"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "action_item",
+      "content": "Gửi tài liệu API cho đối tác",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "tuần sau",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:40",
+          "speaker": "Lan",
+          "quote": "Ai đó bên kỹ thuật gửi tài liệu API cho đối tác nhé, tuần sau."
+        },
+        {
+          "time": "00:55",
+          "speaker": "Hùng",
+          "quote": "Ừ, bên em sẽ lo."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": true,
+      "note": "Hùng đại diện nhóm kỹ thuật nhận việc, chưa chỉ định cá nhân cụ thể thực hiện."
+    },
+    {
+      "type": "action_item",
+      "content": "Xem lại bản test báo cáo",
+      "status": "open",
+      "owner": "Minh",
+      "due": "sớm",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:30",
+          "speaker": "Lan",
+          "quote": "Còn bản test báo cáo, nhờ bên QA xem lại sớm."
+        },
+        {
+          "time": "01:45",
+          "speaker": "Minh",
+          "quote": "Ok, em xem khi rảnh."
+        }
+      ],
+      "confidence": 0.8,
+      "needs_review": true,
+      "note": "Minh đại diện bên QA nhận việc; thời hạn 'khi rảnh' không cụ thể."
+    },
+    {
+      "type": "action_item",
+      "content": "Cập nhật lịch trên Notion",
+      "status": "open",
+      "owner": "Hà",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Và nhớ cập nhật lịch trên Notion nữa."
+        },
+        {
+          "time": "02:20",
+          "speaker": "Hà",
+          "quote": "Dạ."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

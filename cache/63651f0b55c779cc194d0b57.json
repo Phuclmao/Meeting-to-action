@@ -1,0 +1,136 @@
+{
+  "threads": [
+    {
+      "topic": "Chốt thời gian và phạm vi bản demo cho khách hàng",
+      "steps": [
+        "00:20 Lan đề xuất ngày 20/11",
+        "01:00 Hùng phản đối vì gấp và đề xuất 25/11",
+        "01:40 Lan từ chối 25/11 vì trễ cam kết",
+        "02:30 Minh đề xuất 22/11 nếu cắt luồng hoàn tiền",
+        "03:10 Hùng đồng ý phương án 22/11 không hoàn tiền",
+        "03:40 Lan đề xuất lại 20/11 nhưng bỏ lịch sử giao dịch",
+        "04:15 Hà phản đối bỏ lịch sử giao dịch",
+        "04:50 Lan chốt ngày 22/11 và cắt luồng hoàn tiền"
+      ]
+    },
+    {
+      "topic": "Chuẩn bị kịch bản demo",
+      "steps": [
+        "04:50 Lan giao Hà chuẩn bị kịch bản demo",
+        "05:20 Hà xác nhận gửi kịch bản trước ngày 18/11"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Tổ chức demo vào ngày 20/11",
+      "status": "superseded",
+      "owner": "Lan",
+      "due": "20/11",
+      "rationale": "Hùng cho rằng quá gấp và bản thanh toán chưa hoàn thiện",
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Ban đầu chị nghĩ ngày 20/11."
+        },
+        {
+          "time": "01:00",
+          "speaker": "Hùng",
+          "quote": "20/11 gấp quá, bản thanh toán chưa xong."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Tổ chức demo vào ngày 25/11",
+      "status": "superseded",
+      "owner": "Hùng",
+      "due": "25/11",
+      "rationale": "Lan đánh giá là trễ so với cam kết với khách hàng",
+      "evidence": [
+        {
+          "time": "01:00",
+          "speaker": "Hùng",
+          "quote": "Em nghĩ 25/11."
+        },
+        {
+          "time": "01:40",
+          "speaker": "Lan",
+          "quote": "25/11 thì trễ so với cam kết với khách rồi."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Tổ chức demo ngày 20/11 và bỏ phần lịch sử giao dịch",
+      "status": "superseded",
+      "owner": "Lan",
+      "due": "20/11",
+      "rationale": "Hà phản đối vì cho rằng demo sẽ kém thuyết phục",
+      "evidence": [
+        {
+          "time": "03:40",
+          "speaker": "Lan",
+          "quote": "Hay là 20/11 nhưng bỏ luôn lịch sử giao dịch?"
+        },
+        {
+          "time": "04:15",
+          "speaker": "Hà",
+          "quote": "Bỏ lịch sử giao dịch thì demo kém thuyết phục, em không đồng ý."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Chốt ngày demo vào 22/11, cắt bỏ luồng hoàn tiền khỏi bản demo",
+      "status": "final",
+      "owner": "Lan",
+      "due": "22/11",
+      "rationale": "Đây là phương án dung hòa được thời gian cam kết và tiến độ kỹ thuật",
+      "evidence": [
+        {
+          "time": "04:50",
+          "speaker": "Lan",
+          "quote": "Ok, vậy chốt 22/11, bản demo không có hoàn tiền."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Chuẩn bị kịch bản demo",
+      "status": "open",
+      "owner": "Hà",
+      "due": "trước ngày 18/11",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "04:50",
+          "speaker": "Lan",
+          "quote": "Hà chuẩn bị kịch bản demo."
+        },
+        {
+          "time": "05:20",
+          "speaker": "Hà",
+          "quote": "Dạ, em gửi kịch bản trước ngày 18/11."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

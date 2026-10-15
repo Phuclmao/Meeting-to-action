@@ -1,0 +1,7 @@
+[00:20] Lan: Mình bàn hai việc: server staging và lịch release.
+[00:50] Hùng: Staging em đề xuất dùng AWS, quen rồi.
+[01:20] Lan: Ok. Còn release, chị muốn ngày 30/11.
+[01:50] Minh: 30/11 thì QA không đủ thời gian, ít nhất 5/12.
+[02:30] Hùng: Quay lại staging, em xem lại giá, AWS đắt hơn Azure khoảng 20%. Em đổi sang Azure.
+[03:10] Lan: Ok, vậy staging dùng Azure. Release thì chị cần thêm dữ liệu từ QA, chưa chốt.
+[03:50] Minh: Em gửi ước lượng thời gian test cho chị trong ngày mai.

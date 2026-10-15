@@ -1,0 +1,89 @@
+{
+  "threads": [
+    {
+      "topic": "Tích hợp đăng nhập bằng Zalo",
+      "steps": [
+        "00:20 Lan đề xuất thảo luận về việc thêm đăng nhập bằng Zalo.",
+        "01:00 Hùng ủng hộ vì thói quen người dùng Việt.",
+        "01:40 Minh cảnh báo rủi ro bảo trì do Zalo OAuth hay đổi chính sách.",
+        "02:30 Hà xác nhận thiết kế nút đăng nhập không có vấn đề.",
+        "03:10 Lan hoãn quyết định do thiếu dữ liệu, dời sang thứ Hai tuần sau.",
+        "03:30 Hùng nhận tìm hiểu thêm điều khoản của Zalo."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Tích hợp tính năng đăng nhập bằng Zalo",
+      "status": "deferred",
+      "owner": null,
+      "due": "thứ Hai tuần sau",
+      "rationale": "Chưa đủ dữ liệu để chốt và cần đánh giá thêm về rủi ro bảo trì cũng như chính sách của Zalo.",
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Mình chưa đủ dữ liệu. Chưa chốt nhé, để họp thứ Hai tuần sau bàn tiếp."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": true,
+      "note": "Vấn đề bị hoãn để chờ kết quả tìm hiểu thêm về điều khoản."
+    },
+    {
+      "type": "action_item",
+      "content": "Tìm hiểu thêm điều khoản của Zalo",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "trước thứ Hai tuần sau",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:30",
+          "speaker": "Hùng",
+          "quote": "Em sẽ tìm hiểu thêm điều khoản của Zalo trước buổi đó."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Rủi ro bảo trì do Zalo OAuth thường xuyên thay đổi chính sách",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Nhưng Zalo OAuth hay đổi chính sách, rủi ro bảo trì."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Đây là vướng mắc kỹ thuật cần được làm rõ khi Hùng tìm hiểu điều khoản."
+    },
+    {
+      "type": "knowledge",
+      "content": "Việc thiết kế thêm nút đăng nhập Zalo không gặp trở ngại kỹ thuật",
+      "status": "open",
+      "owner": "Hà",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:30",
+          "speaker": "Hà",
+          "quote": "Thiết kế thêm một nút đăng nhập thì được, không vấn đề gì."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

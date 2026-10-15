@@ -1,0 +1,8 @@
+[00:30] Lan: Phần lưu trữ ảnh, mình dùng S3 hay tự host?
+[01:10] Hùng: S3 cho nhanh, em đề xuất S3.
+[01:40] Minh: Ok với em.
+[02:00] Lan: Vậy chốt S3. Hùng tạo bucket trong tuần này.
+[02:20] Hùng: Dạ.
+[05:40] Hà: À mà em nhớ công ty có chính sách dữ liệu phải lưu trong nước.
+[06:10] Lan: Ừ nhỉ, vậy thôi để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không.
+[06:40] Hùng: Vậy em chưa tạo bucket nhé.

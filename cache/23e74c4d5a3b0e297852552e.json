@@ -1,0 +1,85 @@
+{
+  "threads": [
+    {
+      "topic": "Thời gian gửi báo cáo tuần",
+      "steps": [
+        "00:20 Lan hỏi về thời gian gửi báo cáo (Thứ Hai hay Thứ Ba)",
+        "00:50 Hùng đề xuất gửi vào Thứ Ba để kịp tổng hợp số",
+        "01:20 Lan chốt gửi báo cáo vào Thứ Ba"
+      ]
+    },
+    {
+      "topic": "Cung cấp số liệu QA cho báo cáo",
+      "steps": [
+        "01:40 Minh hứa gửi số liệu QA cho Hùng vào chiều Thứ Hai",
+        "02:10 Hùng xác nhận đã tiếp nhận thông tin"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Báo cáo tuần sẽ được gửi vào Thứ Ba thay vì Thứ Hai",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Thứ Hai chưa kịp tổng hợp số liệu",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Thứ Ba cho chắc, thứ Hai chưa kịp tổng hợp số."
+        },
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Ok vậy làm đi."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi số liệu QA cho Hùng",
+      "status": "open",
+      "owner": "Minh",
+      "due": "chiều thứ Hai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Số liệu QA em gửi cho Hùng chiều thứ Hai."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Tổng hợp số liệu và gửi báo cáo tuần",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "Thứ Ba",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Thứ Ba cho chắc, thứ Hai chưa kịp tổng hợp số."
+        },
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Ok vậy làm đi."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": "Hùng là người đề xuất và được Lan giao thực hiện sau khi giải thích về việc tổng hợp số."
+    }
+  ]
+}

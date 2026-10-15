@@ -1,0 +1,6 @@
+[00:20] Lan: Hôm nay bàn xem có nên thêm đăng nhập bằng Zalo không.
+[01:00] Hùng: Em thấy hay, người dùng Việt quen dùng Zalo.
+[01:40] Minh: Nhưng Zalo OAuth hay đổi chính sách, rủi ro bảo trì.
+[02:30] Hà: Thiết kế thêm một nút đăng nhập thì được, không vấn đề gì.
+[03:10] Lan: Mình chưa đủ dữ liệu. Chưa chốt nhé, để họp thứ Hai tuần sau bàn tiếp.
+[03:30] Hùng: Em sẽ tìm hiểu thêm điều khoản của Zalo trước buổi đó.

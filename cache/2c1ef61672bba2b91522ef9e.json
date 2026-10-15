@@ -1,0 +1,71 @@
+{
+  "threads": [
+    {
+      "topic": "Thêm tính năng đăng nhập bằng Zalo",
+      "steps": [
+        "00:20 Lan đề xuất thảo luận về việc thêm đăng nhập Zalo",
+        "01:00 Hùng ủng hộ vì người dùng Việt quen thuộc",
+        "01:40 Minh cảnh báo rủi ro về chính sách và bảo trì",
+        "02:30 Hà xác nhận thiết kế không gặp vấn đề",
+        "03:10 Lan hoãn quyết định đến thứ Hai tuần sau do thiếu dữ liệu",
+        "03:30 Hùng nhận tìm hiểu điều khoản Zalo trước buổi họp tới"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Thêm tính năng đăng nhập bằng Zalo",
+      "status": "deferred",
+      "owner": null,
+      "due": "thứ Hai tuần sau",
+      "rationale": "Chưa đủ dữ liệu để đưa ra quyết định cuối cùng",
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Chưa chốt nhé, để họp thứ Hai tuần sau bàn tiếp."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Vấn đề được hoãn lại để thu thập thêm thông tin về điều khoản"
+    },
+    {
+      "type": "action_item",
+      "content": "Tìm hiểu thêm điều khoản của Zalo",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "trước buổi họp thứ Hai tuần sau",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:30",
+          "speaker": "Hùng",
+          "quote": "Em sẽ tìm hiểu thêm điều khoản của Zalo trước buổi đó."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "blocker",
+      "content": "Zalo OAuth hay thay đổi chính sách gây rủi ro bảo trì",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Nhưng Zalo OAuth hay đổi chính sách, rủi ro bảo trì."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Đây là rủi ro kỹ thuật cần được xem xét khi đánh giá tính khả thi"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "threads": [
+    {
+      "topic": "Lựa chọn giải pháp lưu trữ ảnh",
+      "steps": [
+        "00:30 Lan đặt vấn đề chọn S3 hay tự host",
+        "01:10 Hùng đề xuất dùng S3",
+        "02:00 Lan chốt dùng S3 và giao Hùng tạo bucket trong tuần",
+        "05:40 Hà cảnh báo về chính sách lưu trữ dữ liệu trong nước",
+        "06:10 Lan hoãn quyết định để kiểm tra lại với pháp chế",
+        "06:40 Hùng xác nhận chưa tạo bucket"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Sử dụng S3 để lưu trữ ảnh",
+      "status": "deferred",
+      "owner": null,
+      "due": null,
+      "rationale": "Quyết định bị tạm hoãn do lo ngại vi phạm chính sách lưu trữ dữ liệu trong nước.",
+      "evidence": [
+        {
+          "time": "02:00",
+          "speaker": "Lan",
+          "quote": "Vậy chốt S3."
+        },
+        {
+          "time": "06:10",
+          "speaker": "Lan",
+          "quote": "vậy thôi để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "note": "Quyết định ban đầu là S3 nhưng đã bị mở lại để kiểm tra tính pháp lý."
+    },
+    {
+      "type": "action_item",
+      "content": "Tạo bucket lưu trữ ảnh",
+      "status": "deferred",
+      "owner": "Hùng",
+      "due": "trong tuần này",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:00",
+          "speaker": "Lan",
+          "quote": "Hùng tạo bucket trong tuần này."
+        },
+        {
+          "time": "06:40",
+          "speaker": "Hùng",
+          "quote": "Vậy em chưa tạo bucket nhé."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": true,
+      "note": "Công việc bị tạm dừng cho đến khi có kết luận về việc dùng S3."
+    },
+    {
+      "type": "blocker",
+      "content": "Chính sách dữ liệu phải lưu trong nước",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "05:40",
+          "speaker": "Hà",
+          "quote": "em nhớ công ty có chính sách dữ liệu phải lưu trong nước."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": "Đây là rào cản chính khiến việc sử dụng S3 (cloud quốc tế) cần xem xét lại."
+    },
+    {
+      "type": "open_issue",
+      "content": "Xác nhận với bộ phận pháp chế về tính hợp lệ của việc dùng S3",
+      "status": "open",
+      "owner": "Lan",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "06:10",
+          "speaker": "Lan",
+          "quote": "vậy thôi để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": "Lan tự nhận trách nhiệm kiểm tra."
+    }
+  ]
+}

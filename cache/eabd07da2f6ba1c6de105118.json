@@ -1,0 +1,74 @@
+{
+  "threads": [
+    {
+      "topic": "Thời gian gửi báo cáo tuần và quy trình cung cấp số liệu",
+      "steps": [
+        "00:20 Lan hỏi về lịch gửi báo cáo vào thứ Hai hay thứ Ba",
+        "00:50 Hùng đề xuất gửi vào thứ Ba để kịp tổng hợp số",
+        "01:20 Lan chốt gửi báo cáo vào thứ Ba",
+        "01:40 Minh báo sẽ gửi số liệu QA cho Hùng vào chiều thứ Hai"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Gửi báo cáo tuần vào thứ Ba",
+      "status": "final",
+      "owner": null,
+      "due": "thứ Ba",
+      "rationale": "Thứ Hai chưa kịp tổng hợp số liệu",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Thứ Ba cho chắc, thứ Hai chưa kịp tổng hợp số."
+        },
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Ok vậy làm đi."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Gửi báo cáo tuần vào thứ Hai",
+      "status": "superseded",
+      "owner": null,
+      "due": "thứ Hai",
+      "rationale": "Bị thay thế bởi phương án thứ Ba do không kịp tổng hợp số liệu",
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Báo cáo tuần có cần gửi cho sếp vào thứ Hai không hay thứ Ba?"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi số liệu QA cho Hùng",
+      "status": "open",
+      "owner": "Minh",
+      "due": "chiều thứ Hai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Số liệu QA em gửi cho Hùng chiều thứ Hai."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

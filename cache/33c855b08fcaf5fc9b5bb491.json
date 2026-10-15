@@ -1,0 +1,96 @@
+{
+  "threads": [
+    {
+      "topic": "Chốt ngày và phạm vi bản demo cho khách hàng",
+      "steps": [
+        "00:20 Lan đề xuất demo ngày 20/11",
+        "01:00 Hùng phản đối 20/11, đề xuất 25/11",
+        "01:40 Lan phản đối 25/11",
+        "02:30 Minh đề xuất 22/11 nếu cắt luồng hoàn tiền",
+        "03:40 Lan đề xuất 20/11 bỏ lịch sử giao dịch",
+        "04:15 Hà phản đối bỏ lịch sử giao dịch",
+        "04:50 Lan chốt demo ngày 22/11 không có hoàn tiền",
+        "05:20 Hà cam kết gửi kịch bản trước 18/11"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Demo vào ngày 20/11",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Gấp quá, bản thanh toán chưa xong và phương án bỏ lịch sử giao dịch bị phản đối.",
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Ban đầu chị nghĩ ngày 20/11."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Demo vào ngày 25/11",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Trễ so với cam kết với khách hàng.",
+      "evidence": [
+        {
+          "time": "01:00",
+          "speaker": "Hùng",
+          "quote": "20/11 gấp quá, bản thanh toán chưa xong. Em nghĩ 25/11."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Chốt ngày demo là 22/11, bản demo sẽ không bao gồm luồng hoàn tiền.",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Cân bằng giữa thời hạn cam kết và tiến độ phát triển thực tế của đội kỹ thuật.",
+      "evidence": [
+        {
+          "time": "04:50",
+          "speaker": "Lan",
+          "quote": "Ok, vậy chốt 22/11, bản demo không có hoàn tiền."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Quyết định dựa trên đề xuất của Minh để giải quyết mâu thuẫn về thời gian."
+    },
+    {
+      "type": "action_item",
+      "content": "Chuẩn bị kịch bản demo",
+      "status": "open",
+      "owner": "Hà",
+      "due": "trước ngày 18/11",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "04:50",
+          "speaker": "Lan",
+          "quote": "Hà chuẩn bị kịch bản demo."
+        },
+        {
+          "time": "05:20",
+          "speaker": "Hà",
+          "quote": "Dạ, em gửi kịch bản trước ngày 18/11."
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "note": "Hà tự xác nhận thời hạn hoàn thành."
+    }
+  ]
+}
