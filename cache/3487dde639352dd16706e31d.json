@@ -1,0 +1,94 @@
+{
+  "threads": [
+    {
+      "topic": "Thêm tính năng đăng nhập bằng Zalo",
+      "steps": [
+        "00:20 Lan mở vấn đề thảo luận về việc thêm đăng nhập bằng Zalo",
+        "01:00 Hùng ủng hộ vì người dùng Việt quen dùng",
+        "01:40 Minh cảnh báo rủi ro Zalo OAuth hay đổi chính sách",
+        "02:30 Hà xác nhận thiết kế thêm nút không có vấn đề",
+        "03:10 Lan hoãn quyết định sang thứ Hai tuần sau do chưa đủ dữ liệu",
+        "03:30 Hùng nhận tìm hiểu điều khoản Zalo trước buổi họp"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Hoãn quyết định về việc thêm đăng nhập bằng Zalo sang thứ Hai tuần sau",
+      "status": "deferred",
+      "owner": null,
+      "due": "thứ Hai tuần sau",
+      "rationale": "Chưa đủ dữ liệu để đưa ra quyết định",
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Mình chưa đủ dữ liệu. Chưa chốt nhé, để họp thứ Hai tuần sau bàn tiếp."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Chưa chốt có nên tích hợp đăng nhập bằng Zalo hay không do thiếu thông tin và e ngại rủi ro chính sách",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Hôm nay bàn xem có nên thêm đăng nhập bằng Zalo không."
+        },
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Mình chưa đủ dữ liệu. Chưa chốt nhé, để họp thứ Hai tuần sau bàn tiếp."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Tìm hiểu thêm điều khoản của Zalo",
+      "status": "open",
+      "owner": "Hùng",
+      "due": "trước buổi đó",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:30",
+          "speaker": "Hùng",
+          "quote": "Em sẽ tìm hiểu thêm điều khoản của Zalo trước buổi đó."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "blocker",
+      "content": "Zalo OAuth hay thay đổi chính sách gây rủi ro bảo trì",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Nhưng Zalo OAuth hay đổi chính sách, rủi ro bảo trì."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

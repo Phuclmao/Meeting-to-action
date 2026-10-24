@@ -1,0 +1,74 @@
+{
+  "threads": [
+    {
+      "topic": "Chuẩn bị cho cuộc họp khách hàng vào ngày mai",
+      "steps": [
+        "00:20 Lan thông báo lịch họp khách lúc 9h mai",
+        "00:40 Hà nhận chuẩn bị slide trước 8h",
+        "01:00 Lan yêu cầu Minh mang laptop demo",
+        "01:15 Minh xác nhận sẽ mang laptop demo"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Họp với khách hàng vào lúc 9h ngày mai",
+      "status": "final",
+      "owner": null,
+      "due": "Mai lúc 9h",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Mai mình họp khách lúc 9h nhé."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Chuẩn bị slide thuyết trình",
+      "status": "open",
+      "owner": "Hà",
+      "due": "trước 8h",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:40",
+          "speaker": "Hà",
+          "quote": "Em chuẩn bị slide trước 8h."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Mang laptop demo đi họp",
+      "status": "open",
+      "owner": "Minh",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:00",
+          "speaker": "Lan",
+          "quote": "Ok, Minh nhớ mang laptop demo."
+        },
+        {
+          "time": "01:15",
+          "speaker": "Minh",
+          "quote": "Dạ em mang."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

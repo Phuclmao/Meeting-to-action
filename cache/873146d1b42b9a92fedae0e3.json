@@ -1,0 +1,105 @@
+{
+  "threads": [
+    {
+      "topic": "Giải pháp lưu trữ ảnh (S3 hay tự host)",
+      "steps": [
+        "00:30 Lan mở thảo luận chọn S3 hay tự host",
+        "01:10 Hùng đề xuất dùng S3",
+        "01:40 Minh đồng ý với đề xuất S3",
+        "02:00 Lan chốt dùng S3 và giao Hùng tạo bucket trong tuần này",
+        "05:40 Hà nhắc về chính sách dữ liệu phải lưu trong nước",
+        "06:10 Lan hoãn quyết định để kiểm tra lại với pháp chế",
+        "06:40 Hùng tạm dừng việc tạo bucket"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Sử dụng S3 cho phần lưu trữ ảnh",
+      "status": "deferred",
+      "owner": null,
+      "due": null,
+      "rationale": "Ban đầu đã chốt S3 nhưng sau đó phải hoãn để kiểm tra tính tuân thủ chính sách lưu trữ dữ liệu trong nước với pháp chế.",
+      "evidence": [
+        {
+          "time": "02:00",
+          "speaker": "Lan",
+          "quote": "Vậy chốt S3."
+        },
+        {
+          "time": "06:10",
+          "speaker": "Lan",
+          "quote": "vậy thôi để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "note": "Quyết định đã chốt bị mở lại do vướng chính sách nội bộ, cần chờ xác nhận từ pháp chế."
+    },
+    {
+      "type": "action_item",
+      "content": "Tạo S3 bucket cho phần lưu trữ ảnh",
+      "status": "cancelled",
+      "owner": "Hùng",
+      "due": "trong tuần này",
+      "rationale": "Công việc bị tạm hoãn/hủy do quyết định dùng S3 đang chờ kiểm tra lại với pháp chế.",
+      "evidence": [
+        {
+          "time": "02:00",
+          "speaker": "Lan",
+          "quote": "Hùng tạo bucket trong tuần này."
+        },
+        {
+          "time": "06:40",
+          "speaker": "Hùng",
+          "quote": "Vậy em chưa tạo bucket nhé."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "note": "Việc phụ thuộc vào quyết định đã bị hoãn."
+    },
+    {
+      "type": "action_item",
+      "content": "Kiểm tra lại với pháp chế xem có được dùng S3 theo chính sách lưu trữ dữ liệu hay không",
+      "status": "open",
+      "owner": "Lan",
+      "due": null,
+      "rationale": "Cần xác minh chính sách dữ liệu phải lưu trong nước của công ty trước khi quyết định hạ tầng.",
+      "evidence": [
+        {
+          "time": "06:10",
+          "speaker": "Lan",
+          "quote": "vậy thôi để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "S3 có đáp ứng chính sách lưu trữ dữ liệu trong nước của công ty hay không",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": "Hà nêu chính sách dữ liệu phải lưu trữ trong nước khiến quyết định dùng S3 chưa thể chốt.",
+      "evidence": [
+        {
+          "time": "05:40",
+          "speaker": "Hà",
+          "quote": "em nhớ công ty có chính sách dữ liệu phải lưu trong nước."
+        },
+        {
+          "time": "06:10",
+          "speaker": "Lan",
+          "quote": "để chị kiểm tra lại với pháp chế rồi mới biết S3 có được không."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

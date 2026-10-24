@@ -1,0 +1,116 @@
+{
+  "threads": [
+    {
+      "topic": "Ngân sách và kế hoạch phân bổ quảng cáo tháng này",
+      "steps": [
+        "00:15 Lan đề xuất ngân sách 50 triệu",
+        "00:40 Hà hỏi lại để làm rõ ngân sách",
+        "00:55 Lan đính chính ngân sách là 15 triệu",
+        "01:30 Hùng đề xuất phân bổ 10 triệu cho Facebook và 5 triệu cho Google",
+        "02:10 Lan chốt kế hoạch và giao Hà báo cáo sau hai tuần"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Ngân sách quảng cáo tháng này đặt 50 triệu",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Lan đính chính nhầm lẫn với số liệu của quý trước",
+      "evidence": [
+        {
+          "time": "00:15",
+          "speaker": "Lan",
+          "quote": "Ngân sách quảng cáo tháng này mình đặt 50 triệu."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Ngân sách quảng cáo tháng này là 15 triệu",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Lan đính chính sau khi nhầm với quý trước",
+      "evidence": [
+        {
+          "time": "00:55",
+          "speaker": "Lan",
+          "quote": "À nhầm, 15 triệu thôi, 50 triệu là của quý trước."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Phân bổ ngân sách chiến dịch: 10 triệu cho Facebook, 5 triệu cho Google",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Lan đồng ý với đề xuất của Hùng",
+      "evidence": [
+        {
+          "time": "01:30",
+          "speaker": "Hùng",
+          "quote": "Vậy em chạy chiến dịch với 15 triệu, chia 10 triệu cho Facebook, 5 triệu cho Google."
+        },
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Ừ, làm vậy."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Chạy chiến dịch quảng cáo với 15 triệu (10 triệu Facebook, 5 triệu Google)",
+      "status": "open",
+      "owner": "Hùng",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:30",
+          "speaker": "Hùng",
+          "quote": "Vậy em chạy chiến dịch với 15 triệu, chia 10 triệu cho Facebook, 5 triệu cho Google."
+        },
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Ừ, làm vậy."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Báo cáo kết quả chiến dịch quảng cáo",
+      "status": "open",
+      "owner": "Hà",
+      "due": "sau hai tuần",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Hà báo cáo kết quả sau hai tuần."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

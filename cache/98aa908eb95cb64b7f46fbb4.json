@@ -1,0 +1,93 @@
+{
+  "threads": [
+    {
+      "topic": "Thuê thêm nhân sự thiết kế",
+      "steps": [
+        "00:20 Lan đề xuất thuê thêm một bạn thiết kế",
+        "00:50 Hà băn khoăn về vấn đề ngân sách",
+        "01:20 Hùng gợi ý hỏi kế toán",
+        "01:50 Lan đồng ý và hoãn sang tuần sau bàn tiếp",
+        "02:10 Minh nói nếu rảnh sẽ tìm hiểu các chỗ tuyển dụng"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Thuê thêm một nhân sự thiết kế",
+      "status": "deferred",
+      "owner": null,
+      "due": "tuần sau",
+      "rationale": "Cần kiểm tra lại ngân sách trước khi quyết định",
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Mình có nên thuê thêm một bạn thiết kế không nhỉ?"
+        },
+        {
+          "time": "01:50",
+          "speaker": "Lan",
+          "quote": "Ừ, nghe hợp lý. Có gì tuần sau mình bàn."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": "Vấn đề được hoãn lại để tuần sau bàn tiếp."
+    },
+    {
+      "type": "open_issue",
+      "content": "Kiểm tra xem còn ngân sách để thuê thêm thiết kế hay không",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hà",
+          "quote": "Em nghĩ cũng hay, nhưng không biết ngân sách còn không."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Hỏi kế toán về ngân sách thuê thêm thiết kế",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:20",
+          "speaker": "Hùng",
+          "quote": "Ai đó hỏi kế toán thử xem."
+        }
+      ],
+      "confidence": 0.6,
+      "needs_review": true,
+      "note": "Không có người nhận việc cụ thể, Hùng chỉ nói chung chung 'Ai đó'."
+    },
+    {
+      "type": "action_item",
+      "content": "Tìm hiểu một số kênh/chỗ tuyển dụng",
+      "status": "open",
+      "owner": "Minh",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:10",
+          "speaker": "Minh",
+          "quote": "Em chắc cũng tìm hiểu mấy chỗ tuyển dụng, nếu rảnh."
+        }
+      ],
+      "confidence": 0.5,
+      "needs_review": true,
+      "note": "Minh đưa ra lời hứa mơ hồ ('chắc cũng', 'nếu rảnh'), chưa phải cam kết chắc chắn."
+    }
+  ]
+}

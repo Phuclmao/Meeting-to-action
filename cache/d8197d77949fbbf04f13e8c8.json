@@ -1,0 +1,67 @@
+{
+  "threads": [
+    {
+      "topic": "Thời hạn gửi báo cáo tuần cho sếp",
+      "steps": [
+        "00:20 Lan hỏi gửi báo cáo tuần vào thứ Hai hay thứ Ba",
+        "00:50 Hùng đề xuất thứ Ba do thứ Hai chưa kịp tổng hợp số",
+        "01:20 Lan đồng thuận chốt gửi vào thứ Ba"
+      ]
+    },
+    {
+      "topic": "Cung cấp số liệu QA",
+      "steps": [
+        "01:40 Minh báo sẽ gửi số liệu QA cho Hùng vào chiều thứ Hai",
+        "02:10 Hùng đồng ý"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Báo cáo tuần sẽ được gửi cho sếp vào thứ Ba",
+      "status": "final",
+      "owner": null,
+      "due": "thứ Ba",
+      "rationale": "Thứ Hai chưa kịp tổng hợp số",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Thứ Ba cho chắc, thứ Hai chưa kịp tổng hợp số."
+        },
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Ok vậy làm đi."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi số liệu QA cho Hùng",
+      "status": "open",
+      "owner": "Minh",
+      "due": "chiều thứ Hai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "01:40",
+          "speaker": "Minh",
+          "quote": "Số liệu QA em gửi cho Hùng chiều thứ Hai."
+        },
+        {
+          "time": "02:10",
+          "speaker": "Hùng",
+          "quote": "Ừ."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

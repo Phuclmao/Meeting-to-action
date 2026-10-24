@@ -2,7 +2,7 @@
   {
     "id": "S1",
     "file": "s1_a_to_b.txt",
-    "loai": "Làm tốt",
+    "loai": "Regression M2 - Làm tốt",
     "expect": "Chốt đúng B (VNPay), A bị thay thế; việc Hùng gửi báo giá trước thứ Sáu; vấn đề hoàn tiền là chưa chốt.",
     "checks": {
       "final_contains": [
@@ -23,7 +23,7 @@
   {
     "id": "S2",
     "file": "s2_multi_change.txt",
-    "loai": "Khó: đổi ý nhiều lần",
+    "loai": "Regression M2 - Khó: đổi ý nhiều lần",
     "expect": "Ngày demo chốt là 22/11 (không phải 20/11 hay 25/11); Hà làm kịch bản trước 18/11.",
     "checks": {
       "final_contains": [
@@ -44,7 +44,7 @@
   {
     "id": "S3",
     "file": "s3_ambiguous_owner.txt",
-    "loai": "Khó: owner mơ hồ",
+    "loai": "Regression M2 - Khó: owner mơ hồ",
     "expect": "Việc gửi tài liệu API và cập nhật Notion không có owner chắc chắn: để trống owner hoặc gắn cờ cần xác nhận, không bịa.",
     "checks": {
       "action_review": [
@@ -56,7 +56,7 @@
   {
     "id": "S4",
     "file": "s4_no_decision.txt",
-    "loai": "Bẫy: không có quyết định",
+    "loai": "Regression M2 - Bẫy: không có quyết định",
     "expect": "Không tạo quyết định chốt về Zalo; ghi là vấn đề chưa chốt; việc Hùng tìm hiểu điều khoản.",
     "checks": {
       "no_final_decisions": true,
@@ -72,7 +72,7 @@
   {
     "id": "S5",
     "file": "s5_reversal.txt",
-    "loai": "Dự kiến khó: chốt rồi bị mở lại",
+    "loai": "Regression M2 - Khó: chốt rồi bị mở lại",
     "expect": "S3 không được còn là quyết định chốt chắc chắn (phải hoãn hoặc gắn cờ); việc tạo bucket không còn hiệu lực.",
     "checks": {
       "final_requires_review": [
@@ -87,8 +87,8 @@
   {
     "id": "S6",
     "file": "s6_implicit.txt",
-    "loai": "Dự kiến khó: chốt ngầm",
-    "expect": "Hiểu 'Ok vậy làm đi' là chốt gửi báo cáo vào thứ Ba; Minh gửi số liệu QA chiều thứ Hai.",
+    "loai": "Regression M2 - Khó: chốt ngầm",
+    "expect": "Hiểu 'Ok vậy làm đi' là chốt gửi báo cáo thứ Ba; Minh gửi số liệu QA chiều thứ Hai; việc tổng hợp/gửi báo cáo gán cho Hùng chỉ là suy ra nên phải gắn cờ.",
     "checks": {
       "final_contains": [
         "thứ Ba"
@@ -98,14 +98,17 @@
           "owner": "Minh",
           "content": "số liệu"
         }
+      ],
+      "flagged": [
+        "tổng hợp"
       ]
     }
   },
   {
     "id": "S7",
     "file": "s7_interleaved.txt",
-    "loai": "Khó: hai chủ đề đan xen",
-    "expect": "Staging chốt Azure (không phải AWS); lịch release chưa chốt; Minh gửi ước lượng ngày mai.",
+    "loai": "Regression M2 - Khó: hai chủ đề đan xen",
+    "expect": "Staging chốt Azure (không phải AWS); lịch release chưa chốt và KHÔNG được ghi là 'bị thay thế'; Minh gửi ước lượng ngày mai.",
     "checks": {
       "final_contains": [
         "Azure"
@@ -121,13 +124,19 @@
           "content": "ước lượng"
         }
       ],
-      "open_issue_min": 1
+      "open_issue_min": 1,
+      "status_not": [
+        {
+          "content": "30/11",
+          "status": "superseded"
+        }
+      ]
     }
   },
   {
     "id": "S8",
     "file": "s8_number_fix.txt",
-    "loai": "Khó: người nói tự sửa số liệu",
+    "loai": "Regression M2 - Khó: người nói tự sửa số liệu",
     "expect": "Ngân sách chốt là 15 triệu (không phải 50 triệu); Hà báo cáo sau hai tuần.",
     "checks": {
       "final_contains": [
@@ -142,6 +151,72 @@
           "content": "báo cáo"
         }
       ]
+    }
+  },
+  {
+    "id": "S9",
+    "file": "s9_hedging.txt",
+    "loai": "M3 edge case: lời nói lấp lửng",
+    "expect": "Redis chỉ là đề xuất, KHÔNG được ghi là quyết định chốt; có vấn đề chưa chốt.",
+    "checks": {
+      "no_final_decisions": true,
+      "open_issue_min": 1
+    }
+  },
+  {
+    "id": "S10",
+    "file": "s10_long_multi.txt",
+    "loai": "M3: họp dài nhiều chủ đề đan xen + tri thức",
+    "expect": "QA chốt 1 freelancer (không phải full-time); họp tuần chốt thứ Tư; Minh điều tra lỗi đăng nhập; Lan liên hệ HR; giới hạn VNPay là tri thức dùng lâu dài; màn hình báo lỗi còn chưa chốt.",
+    "checks": {
+      "final_contains": [
+        "freelancer",
+        "thứ Tư"
+      ],
+      "final_not_contains": [
+        "full-time"
+      ],
+      "action": [
+        {
+          "owner": "Minh",
+          "content": "đăng nhập"
+        },
+        {
+          "owner": "Lan",
+          "content": "HR"
+        }
+      ],
+      "knowledge_min": 1,
+      "open_issue_min": 1
+    }
+  },
+  {
+    "id": "S11",
+    "file": "s11_operational.txt",
+    "loai": "M3 edge case: chỉ việc hiện tại, không có tri thức",
+    "expect": "Có việc của Hà và Minh; KHÔNG tạo mục tri thức dùng lâu dài.",
+    "checks": {
+      "knowledge_max": 0,
+      "action": [
+        {
+          "owner": "Hà",
+          "content": "slide"
+        },
+        {
+          "owner": "Minh",
+          "content": "laptop"
+        }
+      ]
+    }
+  },
+  {
+    "id": "S12",
+    "file": "s12_false_action.txt",
+    "loai": "M3 edge case: dễ tạo false action",
+    "expect": "Chỉ là ý tưởng và lời nói lấp lửng: KHÔNG có quyết định chốt, KHÔNG có việc chính thức mà không gắn cờ.",
+    "checks": {
+      "no_final_decisions": true,
+      "no_confident_actions": true
     }
   }
 ]

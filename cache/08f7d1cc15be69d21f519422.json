@@ -1,0 +1,106 @@
+{
+  "threads": [
+    {
+      "topic": "Server staging",
+      "steps": [
+        "00:50 Hùng đề xuất dùng AWS cho staging",
+        "01:20 Lan đồng ý với AWS",
+        "02:30 Hùng báo AWS đắt hơn Azure 20% và đổi sang đề xuất Azure",
+        "03:10 Lan chốt staging dùng Azure"
+      ]
+    },
+    {
+      "topic": "Lịch release",
+      "steps": [
+        "01:20 Lan muốn lịch release là ngày 30/11",
+        "01:50 Minh phản hồi QA không đủ thời gian, đề xuất ít nhất 5/12",
+        "03:10 Lan quyết định chưa chốt lịch release vì cần thêm dữ liệu từ QA",
+        "03:50 Minh hứa gửi ước lượng thời gian test cho Lan trong ngày mai"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Dùng AWS cho server staging",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Bị thay thế bởi Azure do AWS đắt hơn khoảng 20%",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Staging em đề xuất dùng AWS, quen rồi."
+        },
+        {
+          "time": "01:20",
+          "speaker": "Lan",
+          "quote": "Ok."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Dùng Azure cho server staging",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "AWS đắt hơn Azure khoảng 20%",
+      "evidence": [
+        {
+          "time": "02:30",
+          "speaker": "Hùng",
+          "quote": "AWS đắt hơn Azure khoảng 20%. Em đổi sang Azure."
+        },
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Ok, vậy staging dùng Azure."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Chưa chốt ngày release (30/11 hay 5/12) vì cần thêm dữ liệu thời gian test từ QA",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:10",
+          "speaker": "Lan",
+          "quote": "Release thì chị cần thêm dữ liệu từ QA, chưa chốt."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Gửi ước lượng thời gian test cho Lan",
+      "status": "open",
+      "owner": "Minh",
+      "due": "trong ngày mai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "03:50",
+          "speaker": "Minh",
+          "quote": "Em gửi ước lượng thời gian test cho chị trong ngày mai."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

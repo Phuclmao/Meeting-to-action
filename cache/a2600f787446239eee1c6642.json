@@ -1,0 +1,75 @@
+{
+  "threads": [
+    {
+      "topic": "Lựa chọn công nghệ cache (Redis hay Memcached)",
+      "steps": [
+        "00:20 Lan hỏi nên dùng Redis hay Memcached cho phần cache",
+        "00:50 Hùng đề xuất Redis vì quen dùng hơn",
+        "01:30 Minh nhận xét Redis có thể được nhưng chưa kiểm tra với dữ liệu thực tế",
+        "02:10 Lan hoãn quyết định, cho biết ngày mai sẽ hỏi ý kiến anh Nam bên hạ tầng",
+        "02:40 Hùng xác nhận tạm thời chưa cài đặt"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Sử dụng Redis cho phần cache",
+      "status": "proposed",
+      "owner": null,
+      "due": null,
+      "rationale": "Hùng quen dùng Redis hơn",
+      "evidence": [
+        {
+          "time": "00:50",
+          "speaker": "Hùng",
+          "quote": "Chắc là Redis, em quen hơn."
+        }
+      ],
+      "confidence": 0.85,
+      "needs_review": false,
+      "note": "Mới là đề xuất, chưa được chốt"
+    },
+    {
+      "type": "action_item",
+      "content": "Hỏi anh Nam bên hạ tầng về phương án cache",
+      "status": "open",
+      "owner": "Lan",
+      "due": "mai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Để xem đã, mai chị hỏi anh Nam bên hạ tầng rồi tính."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Chưa chốt việc lựa chọn Redis hay Memcached cho phần cache, cần tham khảo ý kiến bên hạ tầng",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "00:20",
+          "speaker": "Lan",
+          "quote": "Phần cache mình dùng Redis hay Memcached nhỉ?"
+        },
+        {
+          "time": "02:10",
+          "speaker": "Lan",
+          "quote": "Để xem đã, mai chị hỏi anh Nam bên hạ tầng rồi tính."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

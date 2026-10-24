@@ -1,0 +1,246 @@
+{
+  "threads": [
+    {
+      "topic": "Nhân sự QA cho đợt release tháng 12",
+      "steps": [
+        "00:40 Lan muốn thuê hai QA freelancer cho release tháng 12",
+        "01:10 Hùng đề xuất một QA full-time hợp lý hơn về lâu dài",
+        "01:50 Lan phản đối vì full-time duyệt lâu không kịp release",
+        "02:20 Minh đề xuất một freelancer là đủ nếu giảm bớt test hồi quy",
+        "03:00 Lan tạm gác chuyện QA",
+        "06:50 Lan quay lại và chốt thuê một QA freelancer vì ngân sách không đủ cho hai người",
+        "07:30 Lan chốt bỏ phương án full-time và nhận liên hệ HR xin danh sách freelancer trước thứ Sáu"
+      ]
+    },
+    {
+      "topic": "Lịch họp tuần",
+      "steps": [
+        "03:00 Lan đề xuất đổi lịch họp thay vì thứ Hai",
+        "03:30 Hà đề xuất thứ Năm",
+        "04:00 Hùng đề xuất thứ Tư",
+        "04:20 Lan chốt lịch họp tuần vào thứ Tư lúc 9h"
+      ]
+    },
+    {
+      "topic": "Lỗi đăng nhập",
+      "steps": [
+        "05:20 Minh báo cáo một số user bị văng ra sau vài phút chưa rõ nguyên nhân",
+        "05:50 Hùng đoán có thể do token hết hạn quá sớm",
+        "06:20 Minh nhận điều tra và báo lại trong ngày mai"
+      ]
+    },
+    {
+      "topic": "Tích hợp cổng VNPay",
+      "steps": [
+        "08:10 Hùng nêu thông tin VNPay giới hạn 100 request/giây mỗi merchant",
+        "08:40 Hùng nêu cần thêm hàng đợi phía server",
+        "09:10 Lan yêu cầu ghi lại kiến thức này",
+        "09:40 Hà đề xuất bàn xem có cần màn hình báo lỗi riêng khi vượt giới hạn",
+        "10:10 Lan hoãn bàn việc màn hình báo lỗi sang cuộc họp sau",
+        "10:30 Hùng nhận viết ghi chú giới hạn VNPay lên wiki"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "type": "decision",
+      "content": "Thuê hai QA freelancer cho đợt release tháng 12",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Không đủ ngân sách cho hai người nên giảm xuống một người",
+      "evidence": [
+        {
+          "time": "00:40",
+          "speaker": "Lan",
+          "quote": "Chị muốn thuê hai QA freelancer cho đợt release tháng 12."
+        },
+        {
+          "time": "06:50",
+          "speaker": "Lan",
+          "quote": "Chị chốt thuê một QA freelancer thôi, hai người thì ngân sách không đủ."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Tuyển một QA full-time",
+      "status": "superseded",
+      "owner": null,
+      "due": null,
+      "rationale": "Quy trình HR duyệt mất cả tháng không kịp đợt release",
+      "evidence": [
+        {
+          "time": "01:10",
+          "speaker": "Hùng",
+          "quote": "Em nghĩ một QA full-time sẽ hợp lý hơn về lâu dài."
+        },
+        {
+          "time": "07:30",
+          "speaker": "Lan",
+          "quote": "Bỏ, ít nhất là đợt này."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Thuê một QA freelancer cho đợt release tháng 12",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Đủ nhu cầu nếu cắt bớt test hồi quy thủ công và phù hợp ngân sách",
+      "evidence": [
+        {
+          "time": "06:50",
+          "speaker": "Lan",
+          "quote": "Chị chốt thuê một QA freelancer thôi, hai người thì ngân sách không đủ."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Liên hệ HR để xin danh sách QA freelancer",
+      "status": "open",
+      "owner": "Lan",
+      "due": "trước thứ Sáu",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "07:30",
+          "speaker": "Lan",
+          "quote": "Chị sẽ liên hệ HR để xin danh sách freelancer trước thứ Sáu."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "decision",
+      "content": "Chốt lịch họp tuần vào thứ Tư lúc 9h",
+      "status": "final",
+      "owner": null,
+      "due": null,
+      "rationale": "Tránh thứ Hai họp hơi sớm và tránh thứ Năm quá sát cuối tuần",
+      "evidence": [
+        {
+          "time": "04:20",
+          "speaker": "Lan",
+          "quote": "Thứ Tư thì ổn. Vậy chốt họp tuần vào thứ Tư lúc 9h."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "blocker",
+      "content": "Một số user bị văng ra sau vài phút khi đăng nhập chưa rõ nguyên nhân",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "05:20",
+          "speaker": "Minh",
+          "quote": "Từ hôm qua một số user bị văng ra sau vài phút, em chưa rõ nguyên nhân."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "action_item",
+      "content": "Điều tra lỗi đăng nhập và báo cáo lại",
+      "status": "open",
+      "owner": "Minh",
+      "due": "trong ngày mai",
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "06:20",
+          "speaker": "Minh",
+          "quote": "Em sẽ điều tra lỗi đăng nhập và báo lại trong ngày mai."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "knowledge",
+      "content": "Cổng VNPay giới hạn 100 request mỗi giây cho mỗi merchant, nếu vượt cần xếp hàng ở phía server",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "08:10",
+          "speaker": "Hùng",
+          "quote": "cổng này giới hạn 100 request mỗi giây cho mỗi merchant."
+        },
+        {
+          "time": "08:40",
+          "speaker": "Hùng",
+          "quote": "Nếu vượt thì phải xếp hàng, bên mình cần thêm hàng đợi ở phía server."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    },
+    {
+      "type": "open_issue",
+      "content": "Có cần màn hình báo lỗi riêng cho trường hợp vượt giới hạn request VNPay hay không",
+      "status": "open",
+      "owner": null,
+      "due": null,
+      "rationale": "Lan hoãn bàn và chưa chốt trong buổi họp này",
+      "evidence": [
+        {
+          "time": "09:40",
+          "speaker": "Hà",
+          "quote": "Em thấy nên bàn thêm xem có cần màn hình báo lỗi riêng cho trường hợp vượt giới hạn."
+        },
+        {
+          "time": "10:10",
+          "speaker": "Lan",
+          "quote": "Cái đó để họp sau, chưa chốt."
+        }
+      ],
+      "confidence": 0.9,
+      "needs_review": false,
+      "note": "Vấn đề được hoãn bàn sang cuộc họp sau"
+    },
+    {
+      "type": "action_item",
+      "content": "Viết ghi chú về giới hạn VNPay lên wiki",
+      "status": "open",
+      "owner": "Hùng",
+      "due": null,
+      "rationale": null,
+      "evidence": [
+        {
+          "time": "10:30",
+          "speaker": "Hùng",
+          "quote": "Em sẽ viết ghi chú về giới hạn VNPay lên wiki."
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": false,
+      "note": null
+    }
+  ]
+}

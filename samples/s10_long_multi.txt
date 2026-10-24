@@ -1,0 +1,22 @@
+[00:15] Lan: Hôm nay mình có bốn việc: nhân sự QA, lịch họp tuần, lỗi đăng nhập và tình hình VNPay.
+[00:40] Lan: Trước hết QA. Chị muốn thuê hai QA freelancer cho đợt release tháng 12.
+[01:10] Hùng: Hai người hơi nhiều. Em nghĩ một QA full-time sẽ hợp lý hơn về lâu dài.
+[01:50] Lan: Full-time phải qua HR duyệt, mất cả tháng, không kịp release.
+[02:20] Minh: Em thấy một freelancer là đủ nếu mình cắt bớt test hồi quy thủ công.
+[03:00] Lan: Tạm gác chuyện QA đã, qua lịch họp tuần. Lâu nay mình họp thứ Hai, chị thấy hơi sớm.
+[03:30] Hà: Thứ Hai em hay kẹt khách, em đề nghị thứ Năm.
+[04:00] Hùng: Thứ Năm sát cuối tuần quá, thứ Tư được không chị?
+[04:20] Lan: Thứ Tư thì ổn. Vậy chốt họp tuần vào thứ Tư lúc 9h.
+[04:50] Hà: Dạ ok chị.
+[05:20] Minh: Qua lỗi đăng nhập. Từ hôm qua một số user bị văng ra sau vài phút, em chưa rõ nguyên nhân.
+[05:50] Hùng: Có thể do token hết hạn quá sớm, nhưng em chưa kiểm tra log.
+[06:20] Minh: Em sẽ điều tra lỗi đăng nhập và báo lại trong ngày mai.
+[06:50] Lan: Khoan, quay lại QA. Chị chốt thuê một QA freelancer thôi, hai người thì ngân sách không đủ.
+[07:20] Hùng: Vậy phương án full-time bỏ hả chị?
+[07:30] Lan: Bỏ, ít nhất là đợt này. Chị sẽ liên hệ HR để xin danh sách freelancer trước thứ Sáu.
+[08:10] Hùng: Còn VNPay, em vừa đọc tài liệu: cổng này giới hạn 100 request mỗi giây cho mỗi merchant.
+[08:40] Hùng: Nếu vượt thì phải xếp hàng, bên mình cần thêm hàng đợi ở phía server.
+[09:10] Lan: Ghi lại nhé, đây là điều quan trọng cho các dự án thanh toán sau này.
+[09:40] Hà: Em thấy nên bàn thêm xem có cần màn hình báo lỗi riêng cho trường hợp vượt giới hạn.
+[10:10] Lan: Cái đó để họp sau, chưa chốt.
+[10:30] Hùng: Em sẽ viết ghi chú về giới hạn VNPay lên wiki.

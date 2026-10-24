@@ -1,0 +1,5 @@
+[00:20] Lan: Phần cache mình dùng Redis hay Memcached nhỉ?
+[00:50] Hùng: Chắc là Redis, em quen hơn.
+[01:30] Minh: Ừ, có thể Redis được, nhưng em chưa thử với dữ liệu của mình.
+[02:10] Lan: Để xem đã, mai chị hỏi anh Nam bên hạ tầng rồi tính.
+[02:40] Hùng: Vậy em chưa cài gì nhé.

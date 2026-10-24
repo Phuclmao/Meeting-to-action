@@ -1,9 +1,21 @@
-"""Lớp kiểm chứng chạy SAU model: chặn mục bịa bằng cách đối chiếu bằng chứng với transcript."""
+"""Lớp kiểm chứng bằng code (không dùng AI).
+M2: kiểm tra bằng chứng + owner có trong transcript.
+M3 (strict=True): thêm 3 luật chống false decision / false action:
+  R1  'bị thay thế' mà không có phương án thay thế -> hạ về 'đề xuất'
+  R2  owner chỉ được suy ra (không được nêu tên hoặc tự nhận trong bằng chứng) -> gắn cờ
+  R3  quyết định 'chốt' mà bằng chứng lấp lửng và không có tín hiệu chốt -> hạ về 'đề xuất'
+"""
 import re
 import difflib
 import unicodedata
 
 LINE_RE = re.compile(r"^\[(\d+:\d+(?::\d+)?)\]\s*([^:]+):\s*(.*)$")
+
+HEDGE_RE = re.compile(r"\b(chắc là|có lẽ|hay là|để xem|tạm thời|thử xem|có thể|nếu được|tính sau|nghĩ lại|khi rảnh|nếu rảnh|chắc cũng|chắc mai|chưa chắc)\b")
+CLOSE_RE = re.compile(r"\b(chốt|quyết định|thống nhất|vậy làm|làm theo|ok vậy|duyệt|đồng ý|vậy dùng|vậy staging)\b")
+VERBS = r"(?:sẽ|xin|gửi|làm|chạy|tạo|xem|tìm|chuẩn bị|lo|báo|cập nhật|kiểm tra|hỏi|viết|liên hệ|điều tra|mang|soạn|test|nhận)"
+COMMIT_RE = re.compile(rf"\b(?:em|mình|tôi|anh|chị|bên em|bên mình)\s+{VERBS}\b|\bđể (?:em|mình|anh|chị|tôi)\b")
+STOP = {"vào", "cho", "của", "với", "các", "một", "được", "ngày", "này", "là", "và", "sử", "dụng", "chốt", "thay", "thế"}
 
 
 def norm(s: str) -> str:
@@ -47,13 +59,21 @@ def owner_in_transcript(owner: str, full_norm: str) -> bool:
     return any(n and n in full_norm for n in names)
 
 
-def verify(data: dict, transcript: str) -> dict:
+def _tokens(text: str):
+    return {t for t in norm(text).split() if len(t) >= 3 and t not in STOP}
+
+
+def _add_note(it, msg):
+    it["note"] = (it["note"] + " " if it.get("note") else "") + msg
+    it["needs_review"] = True
+
+
+def verify(data: dict, transcript: str, strict: bool = True) -> dict:
     rows = parse_transcript(transcript)
     full_norm = " ".join(r["norm"] for r in rows)
-    speakers_norm = " ".join(norm(r["speaker"]) for r in rows)
-    haystack = full_norm + " " + speakers_norm
+    haystack = full_norm + " " + " ".join(norm(r["speaker"]) for r in rows)
 
-    kept, rejected = [], []
+    kept, rejected, corrections = [], [], []
     for it in data.get("items", []):
         it = dict(it)
         evs = [dict(e) for e in it.get("evidence") or []]
@@ -76,11 +96,42 @@ def verify(data: dict, transcript: str) -> dict:
         it["note"] = " ".join(notes) if notes else None
         kept.append(it)
 
+    if strict:
+        finals = [i for i in kept if i.get("type") == "decision" and i.get("status") == "final"]
+        for it in kept:
+            qtext = " ".join(norm(e.get("quote", "")) for e in it["evidence"])
+            speakers = {norm(e.get("speaker") or "") for e in it["evidence"]}
+            # R1: bị thay thế nhưng không có phương án thay thế
+            if it.get("type") == "decision" and it.get("status") == "superseded":
+                mine = _tokens(it["content"])
+                if not any(mine & _tokens(f["content"]) for f in finals):
+                    it["status"] = "proposed"
+                    _add_note(it, "[R1] Không tìm thấy phương án thay thế nên hạ từ 'bị thay thế' về 'đề xuất'.")
+                    corrections.append({"rule": "R1", "content": it["content"]})
+            # R2: owner chỉ được suy ra
+            if it.get("type") == "action_item" and it.get("owner"):
+                names = [norm(x) for x in re.split(r",|/|&|\bvà\b", it["owner"]) if norm(x)]
+                named = any(n in qtext for n in names)
+                self_commit = bool(COMMIT_RE.search(qtext)) and any(n in speakers for n in names)
+                if not (named or self_commit) and not it.get("needs_review"):
+                    _add_note(it, "[R2] Owner được suy ra, không được nêu tên hoặc tự nhận trong bằng chứng.")
+                    corrections.append({"rule": "R2", "content": it["content"]})
+            # R3: chốt nhưng lấp lửng và không có tín hiệu chốt
+            if it.get("type") == "decision" and it.get("status") == "final":
+                if HEDGE_RE.search(qtext) and not CLOSE_RE.search(qtext):
+                    it["status"] = "proposed"
+                    _add_note(it, "[R3] Bằng chứng lấp lửng và không có tín hiệu chốt nên hạ từ 'chốt' về 'đề xuất'.")
+                    corrections.append({"rule": "R3", "content": it["content"]})
+            elif it.get("type") == "action_item" and HEDGE_RE.search(qtext) and not it.get("needs_review"):
+                _add_note(it, "[R3] Lời nhận việc lấp lửng.")
+                corrections.append({"rule": "R3", "content": it["content"]})
+
     finals = [i for i in kept if i.get("type") == "decision" and i.get("status") == "final"]
     return {
         "threads": data.get("threads", []),
         "items": kept,
         "rejected": rejected,
+        "corrections": corrections,
         "stats": {"kept": len(kept), "rejected": len(rejected), "final_decisions": len(finals),
-                  "needs_review": sum(1 for i in kept if i.get("needs_review"))},
+                  "needs_review": sum(1 for i in kept if i.get("needs_review")), "corrections": len(corrections)},
     }
