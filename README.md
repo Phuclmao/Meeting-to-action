@@ -1,8 +1,8 @@
 ## Mission 3: Cải tiến
 
-- Demo Mission 3: `<ĐIỀN LINK APP NHÁNH mission3>`
+- Demo Mission 3: https://meeting-to-action-mission3.streamlit.app/
 - Video cải tiến (≤ 5 phút): `<ĐIỀN LINK>`
-- Bản Mission 2 (để so sánh): tag `mission2` trong repo này, demo cũ `<LINK DEMO M2>`
+- Bản Mission 2 (để so sánh): tag `main` trong repo này, demo cũ `<LINK DEMO M2>`
 - Kết quả kiểm thử đầy đủ: `results_m3.md` (Before = luật kiểm tra của M2, After = luật của M3, chấm trên cùng đầu ra của model)
 
 ### Change Request
