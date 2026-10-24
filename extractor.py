@@ -11,7 +11,7 @@ from schema import Extraction
 
 load_dotenv()  # đọc GEMINI_API_KEY / GEMINI_MODEL từ file .env (không commit)
 CACHE_DIR = Path(__file__).parent / "cache"
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3-flash-preview")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 
 
 class NoApiKey(Exception):
